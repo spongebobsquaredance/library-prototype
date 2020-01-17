@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
+import { GlobalStyles } from './GlobalStyles';
+import { SummaryCard } from './components/SummaryCard/SummaryCard';
+import { themes } from './themes';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themes.modern}>
+      <GlobalStyles />
+      <SummaryCard
+        ctaText="Subscribe!!"
+        headerText="Primary Header Text" 
+        summaryText="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+        linkText="Subscribe!!"
+        href="https://google.com"
+      />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
