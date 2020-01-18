@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { CardContainer } from './CardContainer/CardContainer';
 import { CallToAction } from '../Global/CallToAction/CallToAction';
@@ -18,3 +19,10 @@ export const SummaryCard = ({ href, linkText, headerText, summaryText}) =>
       <CallToAction href={href}>{linkText}</CallToAction>
     </CardContainer>
   </div>
+
+SummaryCard.propTypes ={
+  href: PropTypes.string,
+  linkText: PropTypes.string,
+  headerText: PropTypes.string,
+  summaryText: PropTypes.string
+}
