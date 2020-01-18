@@ -11,7 +11,7 @@ const SummaryText = styled.p`
   color: ${p => p.theme.primaryTextColor};
 `
 
-export const SummaryCard = ({ href, linkText, headerText, summaryText}) => 
+export const SummaryCard = ({ headerText, summaryText, href, linkText }) => 
   <div className="summary-card">
     <CardContainer>
       <HeaderOne>{headerText}</HeaderOne>
